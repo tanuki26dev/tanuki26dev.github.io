@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanuki26 Apps Gallery</title>
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --primary-light: #40916c;
+            --bg: #fafaf8;
+            --text: #1a1a1a;
+            --muted: #6b7280;
+            --border: #e5e7eb;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 24px 48px;
+            flex: 1;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: var(--muted);
+        }
+
+        .apps {
+            display: grid;
+            gap: 20px;
+        }
+
+        .app-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+        }
+
+        .app-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-light);
+        }
+
+        .app-card .app-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .app-card .app-icon img {
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-card h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .app-card .app-subtitle {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .app-card .app-links {
+            display: flex;
+            gap: 16px;
+            font-size: 0.85rem;
+        }
+
+        .app-card .app-links a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .app-card .app-links a:hover {
+            text-decoration: underline;
+        }
+
+        .app-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 10px;
+            background: #d1fae5;
+            color: var(--primary);
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        .app-badge.coming-soon {
+            background: #f3f4f6;
+            color: var(--muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8rem;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+
+        footer a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>Tanuki26 Apps Gallery</h1>
+        </div>
+
+        <div class="apps">
+            <!-- 買い物リスト -->
+            <div class="app-card">
+                <div class="app-icon"><img src="shopping-list/icon.png" alt="買い物リスト アイコン"></div>
+                <h2>買い物リスト <span class="app-badge">iOS</span></h2>
+                <div class="app-subtitle">みんなで共有お買い物メモ</div>
+                <div class="app-links">
+                    <a href="shopping-list/privacy-policy.html">プライバシーポリシー</a>
+                    <a href="shopping-list/support.html">サポート</a>
+                </div>
+            </div>
+
+            <!-- ネットワーク管理（将来） -->
+            <div class="app-card" style="opacity: 0.6;">
+                <div class="app-icon">📡</div>
+                <h2>Network Monitor <span class="app-badge coming-soon">Coming Soon</span></h2>
+                <div class="app-subtitle">macOS向けネットワーク管理アプリ</div>
+                <div class="app-links">
+                    <span style="color: var(--muted);">準備中</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 tanuki26. All rights reserved.</p>
+        <p style="margin-top: 4px;"><a href="mailto:tanuki26dev@gmail.com">tanuki26dev@gmail.com</a></p>
+    </footer>
+</body>
+
+</html>
