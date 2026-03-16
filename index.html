@@ -119,6 +119,31 @@
             text-decoration: underline;
         }
 
+        .app-release {
+            font-size: 0.8rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .app-store-badge {
+            margin-bottom: 12px;
+        }
+
+        .app-store-badge a {
+            display: inline-block;
+            transition: opacity 0.2s ease;
+        }
+
+        .app-store-badge a:hover {
+            opacity: 0.8;
+        }
+
+        .app-store-badge img {
+            height: 40px;
+            width: auto;
+        }
+
         .app-badge {
             display: inline-block;
             font-size: 0.7rem;
@@ -178,6 +203,12 @@
                 <div class="app-icon"><img src="network-monitor/icon.png" alt="Network Monitor アイコン"></div>
                 <h2>Network Monitor <span class="app-badge">macOS</span></h2>
                 <div class="app-subtitle">macOS向けネットワーク速度モニター</div>
+                <div class="app-release">2026.3.16 ver 1.14 公開</div>
+                <div class="app-store-badge">
+                    <a href="https://apps.apple.com/jp/app/network-monitor/id6759764815?mt=12" target="_blank" rel="noopener noreferrer">
+                        <img src="network-monitor/mac-app-store-badge.svg" alt="Download on the Mac App Store">
+                    </a>
+                </div>
                 <div class="app-links">
                     <a href="network-monitor/privacy-policy.html">プライバシーポリシー</a>
                     <a href="network-monitor/support.html">サポート</a>
